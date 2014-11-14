@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Soundmood</title>
+        
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="styles/jumbotron-narrow.css" rel="stylesheet">
+        <link href="image_style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico"> 
+        
+    </head>
+    <body>
+        
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted"></h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Soundmood</h1>
+        <p class="lead">LISTEN TO YOUR HEART, YOU CAN NEVER GO WRONG.</p>
+        <br />
+        <form>
+           <div class="input-group">
+               <input id="mood" type="text" class="form-control" placeholder="How are you feeling?">
+                  <a id="go" class="input-group-addon" href="#" role="button">Go</a>
+           </div> 
+        </form>
+        
+        <p><a id="rndbtn" class="btn btn-lg btn-success" href="#" role="button">Randomize</a></p>
+        <p id="moodstatus"></p>
+        <p id="songtitle"></p>
+      </div>
+        
+        <div id="SCPlayer"></div>
+         <div class="row marketing">
+        <div class="col-lg-6">
+                     <img id="pic" src="http://farm3.staticflickr.com/2909/14204243864_fa2b427782.jpg">
+        
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Search</h4>
+          <p>Simply type in the mood you are currently in and a song will be generated based on that mood.</p>
+
+          <h4>Hear</h4>
+          <p>We grab all of our songs directly from <a href="http://soundcloud.com">Soundcloud</a>, so there are millions of selections.</a></p>
+
+          <h4>Explore</h4>
+          <p>Using Soundmood, you can find hundreds of songs based on unique mood.</p>
+          
+           <h4>Quantity & Quality</h4>
+          <p>Soundmood has a selection of 284 different emotions/mood, so good luck entering one that doesn't exist.</p>
+          
+           <h4>See</h4>
+          <p>For each song generated based on your mood, we also add in an image from <a href="http://flickr.com">Flickr</a> that's also based on your mood.</p>
+        </div>
+        </div>
+        <div class="footer">
+            <p>&copy; Soundmood</p>
+        </div>
+    </div>
+        <script src="js/script.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        
+        
+        <script src="//connect.soundcloud.com/sdk.js"></script>
+        
+        <script src="js/Soundcloudapi.js"></script>
+        <script src="js/typeahead.js"></script>
+    
+        <script>
+            function changeColor(x) {
+               var chng = $('.jumbotron').css('background-color', x)
+            }
+                
+             $( document ).ready(function() {
+                $("#mood").typeahead({ source:listOfEmotions });
+            });
+            
+            function rndm() {
+                var text = document.getElementById("mood").value;
+                if (text.length > 1){
+                    changeColor(getColor(text));
+                    search_flickr(text);
+                }
+                
+            }
+            
+            var button = document.getElementById("go");
+            button.addEventListener("click", rndm);
+            
+            
+            
+        </script>
+    </body>
+    
+</html>
