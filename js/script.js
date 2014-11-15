@@ -4,9 +4,6 @@
 //
 // ==========================
 
-// List of moods
-var moodList = [];
-
 
 // ==============================
 //
@@ -14,6 +11,9 @@ var moodList = [];
 //
 // ==============================
 
+//
+// # Initialize the Soundcloud API client with our client ID
+//
 SC.initialize({
   client_id: '5aa8e389ba4e24b6106af5159ab3e344'
 });
@@ -102,6 +102,7 @@ function playTrack (trackid) {
 // # Update Jumbotron
 //
 // Updates the header text to show the user's mood.
+// (Optional: change the jumbotron's color)
 //
 // * **mood**, the user's mood
 //
@@ -115,6 +116,9 @@ function updateJumboTron (mood) {
 //      Randomization
 //
 // =======================
+
+// List of moods
+var moodList = [];
 
 //
 // # 'Random' button click handler
@@ -149,27 +153,8 @@ function randomMood () {
 //
 
 //
-// 1. Change color
+// 1. Change jumbotron color!
 //
-
-// Map a few of our moods to 'happy' or 'sad'
-var moodMap = {
-  'happy': 'happy',
-  'joy': 'happy',
-  'excited': 'happy',
-  'sweet': 'happy',
-  'sad': 'sad',
-  'worried': 'sad',
-  'scared': 'sad',
-  'afraid': 'sad'
-};
-
-// Map 'happy' and 'sad' to some colors
-var colorMap = {
-  'happy': ['ffff33', 'cc3333', '33ff33', '3366cc'],
-  'sad': ['330000', '000033', '003300']
-};
-
 //
 // # Change the color of the jumbotron
 //
@@ -184,30 +169,18 @@ function changeColor (color) {
 //
 // # Get the mood color
 //
-// If our moodmap contains the given mood, return the right color.
-// Otherwise, return a random color.
+// 1. Choose a color for the given mood and return it
+// ex. If 'happy', then return '#fffff' (white)
+// 2. Make sure to return a default color
 //
 // * **mood**, the user's mood
 //
-// * returns a color
+// * returns a color's hex code
 //
 function getColor (mood) {
   // TODO: fill this out
 }
 
-//
-// # Generate a random color
-//
-// Returns a random color hex code.
-//
-function randomColor () {
-  var letters = '0123456789ABCDEF'.split('');
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
 
 //
 // 2. Typeahead
