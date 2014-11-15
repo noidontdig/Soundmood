@@ -23,6 +23,7 @@ Play a track using the Soundcloud API (Reading the Soundcloud documentation will
 1. Read the Soundcloud documentation to figure out how to **stream** (or play) a track
 
     HTTP API GUIDE -> Playing Sounds ->  Streaming sounds
+
 2. Use `SC.stream` to play a track
   * Hint: you need to know something about the track
 3. Fill out the `playOneTrack()` function
