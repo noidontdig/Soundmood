@@ -62,7 +62,8 @@ var currentSong;
 //
 // # 'Go' button click handler
 //
-// Get the user's mood and play a song that matches that mood.
+// 1. Get the user's mood from the form
+// 2. Search Souncloud for a song for the mood
 //
 function goClicked () {
   // TODO: fill this out
@@ -71,8 +72,9 @@ function goClicked () {
 //
 // # Search soundcloud tracks
 //
-// Search soundcloud using the Soundcloud API for a song that
+// 1. Search soundcloud using the Soundcloud API to find a song that
 // matches the user's mood.
+// 2. Play the song
 //
 // * **mood**, the user's mood.
 //
@@ -83,8 +85,8 @@ function searchTracks (mood) {
 //
 // # Play a track
 //
-// Play a Soundcloud track. If there is already a song playing,
-// stop that song first.
+// Play a Soundcloud track.
+// If there is already a song playing, stop that song first.
 //
 // Use 'currentSong' to keep track of the song that is playing.
 //
