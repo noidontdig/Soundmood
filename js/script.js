@@ -64,6 +64,7 @@ var currentSong;
 //
 // 1. Get the user's mood from the form
 // 2. Search Souncloud for a song for the mood
+// 3. Update jumbotron #moodstatus to dipsplay the mood
 //
 function goClicked () {
   // TODO: fill this out
@@ -75,6 +76,7 @@ function goClicked () {
 // 1. Search soundcloud using the Soundcloud API to find a song that
 // matches the user's mood.
 // 2. Play the song
+// 3. Update jumbotron #songtitle to display the song title
 //
 // * **mood**, the user's mood.
 //
@@ -104,7 +106,7 @@ function playTrack (trackid) {
 // * **mood**, the user's mood
 //
 function updateJumboTron (mood) {
-  $('#moodstatus').html('It sounds like you are in a ' + mood +  ' mood!!');
+  $('#moodstatus').text('It sounds like you are in a ' + mood +  ' mood!!');
 }
 
 
