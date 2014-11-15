@@ -31,7 +31,7 @@ HTTP API GUIDE -> Playing Sounds ->  Streaming sounds
 
 ###2) Add click handlers
 
-Add a click handler for the GO button -- make the GO button DO something by adding a click handler!
+Add a click handler for the `#go` button -- make the `#go` button DO something by adding a click handler!
 
 * Hint: you can use Javascript or jQuery for this
 * Hint: call the click handler `playOneTrack()` to play a song when you click the button
