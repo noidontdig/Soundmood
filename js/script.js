@@ -192,6 +192,8 @@ function changeColor (color) {
 //
 // * **mood**, the user's mood
 //
+// * returns a color
+//
 function getColor (mood) {
   // TODO: fill this out
 }
