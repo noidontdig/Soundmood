@@ -10,7 +10,7 @@ ScriptEd Year 2 Curriculum project - Using the Souncloud API
 * **Explore**: Using Soundmood, you can find hundreds of songs based on unique mood
 * **Quantity &amp; Quality**: Soundmood has a selection of many different emotions/mood, so good luck entering one that doesn't exist.
 
-=====
+
 #Assignment
 
 
